@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đăng ký thành viên</title>
+</head>
+<body>
+<h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+<form action="https://api-gateway.f8.edu.vn/action_page.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Thông tin cơ bản</legend>
+        <label for="fullname">Họ và tên</label>
+        <input name="fullname"
+               type="text"
+               id="fullname"
+               placeholder="Nguyen Van A"
+               required
+               autofocus
+               tabindex="1"><br><br>
+        <label for="email">Email</label>
+        <input name="email"
+               type="email"
+               id="email"
+               placeholder="example@gmail.com"
+               required
+               tabindex="2"><br><br>
+        <label for="password">Mật khẩu</label>
+        <input type="password"
+               name="password"
+               id="password"
+               required
+               minlength="6"
+               autocomplete="off"
+               tabindex="3"><br><br>
+        <label for="confirm_password">Nhập lại mật khẩu</label>
+        <input type="password"
+               name="confirm_password"
+               id="confirm_password"
+               required
+               tabindex="4"><br><br>
+        <label for="phone">Số điện thoại</label>
+        <input type="tel"
+               name="phone"
+               id="phone"
+               placeholder="0xxxxxxxxx"
+               pattern="0[0-9]{9}"
+               tabindex="5"><br><br>
+        <label for="birthday">Ngày sinh</label>
+        <input type="date"
+               name="birthday"
+               id="birthday"
+               required
+               tabindex="6"><br><br>
+        <label for="age">Tuổi</label>
+        <input type="number"
+               name="age"
+               id="age"
+               min="1"
+               max="120"
+               tabindex="7"><br><br>
+        <label for="website">website cá nhân</label>
+        <input type="url"
+               name="website"
+               id="website"
+               placeholder="https://..."
+               tabindex="8"><br><br>
+        <label for="address">Địa chỉ</label>
+        <input type="text"
+               name="address"
+               id="address"
+               placeholder="Số nhà, đường, phường/xã"
+               tabindex="9"><br><br>
+        <label>Mã bưu chính</label>
+        <input type="text"
+               name="zipcode"
+               id="zipcode"
+               maxlength="6"
+               placeholder="700000"
+               tabindex="10"><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Thông tin bổ sung</legend>
+        <label for="gender">Giới tính</label>
+        <input type="radio"
+               name="gender"
+               value="Nam"
+               tabindex="11"
+               required>Nam
+        <input type="radio"
+               id="gender"
+               value="Nữ">Nữ
+        <input type="radio"
+               name="gender"
+               value="Khác">Khác
+        <br><br>
+        <label>Sở thích</label>
+        <input type="checkbox"
+               name="hobby"
+               value="Đọc sách"
+               tabindex="12"
+               required>Đọc sách
+        <input type="checkbox"
+               name="hobby"
+               value="Nghe nhạc">Nghe nhạc
+        <input type="checkbox"
+               name="hobby"
+               value="Du lịch">Du lịch
+        <input type="checkbox"
+               name="hobby"
+               value="Lập trình">Lập trình
+        <input type="checkbox"
+               name="hobby"
+               value="Nấu ăn">Nấu ăn
+        <input type="checkbox"
+               name="hobby"
+               value="Thể thao">Thể thao
+        <br><br>
+        <label for="education">Trình độ học vấn</label>
+        <select name="education" id="education" tabindex="13">
+            <option value="">-- Chọn trình độ --</option>
+            <option value="Trung học">Trung học</option>
+            <option value="Cao đẳng">Cao đẳng</option>
+            <option value="Đại học">Đại học</option>
+            <option value="Sau đại học">Sau đại học</option>
+        </select>
+        <br><br>
+        <label for="city">Tỉnh / Thành phố:</label>
+        <select id="city" name="city" multiple size="5" tabindex="14">
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="TP.HCM">TP.HCM</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Hải Phòng">Hải Phòng</option>
+            <option value="Cần Thơ">Cần Thơ</option>
+        </select>
+        <br><br>
+        <label for="job">Nghề nghiệp:</label>
+        <select id="job" name="job" tabindex="15">
+            <option value="">-- Chọn nghề nghiệp --</option>
+            <option value="Học sinh">Học sinh</option>
+            <option value="Sinh viên">Sinh viên</option>
+            <option value="Nhân viên văn phòng">Nhân viên văn phòng</option>
+            <option value="Lập trình viên">Lập trình viên</option>
+            <option value="Khác">Khác</option>
+        </select>
+        <br><br>
+        <label>Khóa học quan tâm:</label><br>
+        <input type="checkbox" id="html" name="course" value="HTML-CSS" tabindex="16">
+        <label for="html">HTML-CSS</label>
+
+        <input type="checkbox" id="js" name="course" value="JavaScript">
+        <label for="js">JavaScript</label>
+
+        <input type="checkbox" id="react" name="course" value="ReactJS">
+        <label for="react">ReactJS</label>
+
+        <input type="checkbox" id="node" name="course" value="NodeJS">
+        <label for="node">NodeJS</label>
+
+        <input type="checkbox" id="python" name="course" value="Python">
+        <label for="python">Python</label>
+        <br><br>
+        <label>Hình thức học:</label>
+        <input type="radio" id="online" name="study_type" value="Online" tabindex="17">
+        <label for="online">Online</label>
+
+        <input type="radio" id="offline" name="study_type" value="Offline">
+        <label for="offline">Offline</label>
+        <br><br>
+        <label for="bio">Giới thiệu bản thân:</label><br>
+        <textarea id="bio"
+                  name="bio"
+                  rows="4"
+                  placeholder="Viết vài dòng về bản thân..."
+                  tabindex="18"></textarea>
+        <br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Thông tin đặc biệt</legend>
+        <label for="fav_color">Màu yêu thích:</label>
+        <input type="color"
+               id="fav_color"
+               name="fav_color"
+               value="#ff6600"
+               tabindex="19"><br><br>
+        <label for="avatar">Ảnh đại diện:</label>
+        <input type="file"
+               id="avatar"
+               name="avatar"
+               accept=".jpg,.png"
+               tabindex="20"><br><br>
+        <label for="cv">CV:</label>
+        <input type="file"
+               id="cv"
+               name="cv"
+               accept=".pdf,.doc,.docx"
+               tabindex="21"><br><br>
+        <label for="course_id">Mã khóa học:</label>
+        <input type="text"
+               id="course_id"
+               name="course_id"
+               value="F8_2024"
+               readonly
+               tabindex="22"><br><br>
+        <label for="utm_source">Nguồn truy cập:</label>
+        <input type="text"
+               id="utm_source"
+               name="utm_source"
+               value="website"
+               disabled
+               tabindex="23"><br><br>
+
+    </fieldset>
+<fieldset>
+    <legend>Xác nhận & Điều khoản</legend>
+    <input type="checkbox"
+           id="agree_terms"
+           name="agree_terms"
+           required
+           tabindex="24">
+    <label for="agree_terms">
+        Tôi đồng ý với điều khoản sử dụng
+    </label>
+    <br><br>
+    <input type="checkbox"
+           id="subscribe"
+           name="subscribe"
+           tabindex="25">
+    <label for="subscribe">
+        Nhận thông báo qua email
+    </label>
+    <br><br>
+    <input type="checkbox"
+           id="sms_notify"
+           name="sms_notify"
+           tabindex="26">
+    <label for="sms_notify">
+        Nhận thông báo qua SMS
+    </label>
+    <br><br>
+    <label for="ref_code">Mã giới thiệu:</label>
+    <input type="text"
+           id="ref_code"
+           name="ref_code"
+           placeholder="Nhập mã nếu có"
+           tabindex="27">
+    <br><br>
+    <input type="hidden"
+           name="course_id"
+           value="F8_2024">
+    <input type="hidden"
+           name="utm_source"
+           value="website">
+</fieldset>
+<br>
+<input type="submit" value="Đăng ký ngay" tabindex="28">
+<input type="reset" value="Nhập lại" tabindex="29">
+</form>
+</body>
+</html>
