@@ -70,50 +70,69 @@
                id="address"
                placeholder="Số nhà, đường, phường/xã"
                tabindex="9"><br><br>
-        <label>Mã bưu chính</label>
+        <label for="zipcode">Mã bưu chính</label>
         <input type="text"
                name="zipcode"
                id="zipcode"
                maxlength="6"
                placeholder="700000"
                tabindex="10"><br><br>
+
     </fieldset>
     <fieldset>
         <legend>Thông tin bổ sung</legend>
-        <label for="gender">Giới tính</label>
+        <label>Giới tính</label>
         <input type="radio"
+               id="male"
                name="gender"
                value="Nam"
                tabindex="11"
                required>Nam
+        <label for="male"></label>
         <input type="radio"
-               id="gender"
+               id="female"
+               name="gender"
                value="Nữ">Nữ
+        <label for="female">Nữ</label>
         <input type="radio"
+               id="other"
                name="gender"
                value="Khác">Khác
+        <label for="other">Khác</label>
         <br><br>
         <label>Sở thích</label>
         <input type="checkbox"
+               id="read"
                name="hobby"
                value="Đọc sách"
                tabindex="12"
                required>Đọc sách
+        <label for="read"></label>
         <input type="checkbox"
+               id="music"
                name="hobby"
-               value="Nghe nhạc">
+               value="Nghe nhạc">Nghe nhạc
+        <label for="music"></label>
         <input type="checkbox"
+               id="travel"
                name="hobby"
                value="Du lịch">Du lịch
+        <label for="travel"></label>
         <input type="checkbox"
+               id="code"
                name="hobby"
                value="Lập trình">Lập trình
+        <label for="code"></label>
         <input type="checkbox"
+               id="cook"
                name="hobby"
                value="Nấu ăn">Nấu ăn
+        <label for="cook"></label>
         <input type="checkbox"
+               id="sport"
                name="hobby"
                value="Thể thao">Thể thao
+        <label for="sport"></label>
         <br><br>
         <label for="education">Trình độ học vấn</label>
         <select name="education" id="education" tabindex="13">
