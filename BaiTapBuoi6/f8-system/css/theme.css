@@ -1,0 +1,36 @@
+.title {
+    color: chocolate;
+}
+.h2 {
+    color: cornflowerblue;
+}
+#special {
+    color: chartreuse;
+}
+#main {
+    color: darkgoldenrod;
+}
+p.highlight {
+    color: slateblue;
+}
+h2.title#special {
+    color: cadetblue;
+}
+.section#main {
+    color: pink;
+}
+p.title {
+    color: black;
+}
+h1.title#special {
+    color: slateblue;
+}
+.section {
+    color: blue;
+}
+.highlight {
+    color: saddlebrown;
+}
+.big {
+    color: coral;
+}
