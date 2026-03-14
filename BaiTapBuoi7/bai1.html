@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1  {
+            width: 100%;
+            background-color: orange;
+            color: #f2f2f2;
+            border-left: 0;
+            border-top: 0;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #f5f5f5;
+            width: 100%;
+        }
+        span {
+            opacity: 0.5;
+        }
+        /*Theme*/
+        #light:checked ~ label[for="light"],
+        #light:checked ~ .light-box {
+            background-color: bisque;
+        }
+        #dark:checked ~ label[for="dark"],
+        #dark:checked ~ .dark-box {
+            background-color: #1b1515;
+            color: white;
+        }
+        /*Opacity*/
+        #light:checked ~ .light-box span,
+        #dark:checked ~ .dark-box span,#red:checked ~ .red-box span,
+        #blue:checked ~ .blue-box span,
+        #green:checked~.green-box span,
+        #vi:checked ~ .vi-box span,
+        #en:checked ~ .eng-box span,
+        #advanced:checked ~ .advanced-box span,
+        #eco:checked ~ .eco-box span,
+        #importance:checked ~ .importance-box span{
+            opacity: 1;
+        }
+    /*Main color*/
+        #red:checked ~ label[for="red"],
+        #red:checked ~ .red-box,
+        #importance:checked ~ label[for="importance"],
+        #importance:checked ~ .importance-box{
+            background-color: rgba(255, 144, 144, 0.79);
+            color: red;
+        }
+        #en:checked ~ label[for="en"],
+        #blue:checked ~ label[for="blue"],
+        #blue:checked ~ .blue-box,
+        #en:checked ~ .eng-box{
+            background-color: rgba(70, 135, 211, 0.79);
+            color: blue;
+        }
+        #green:checked ~ label[for="green"],
+        #vi:checked ~ label[for="vi"],
+        #green:checked ~ .green-box,
+        #vi:checked ~ .vi-box,
+        #eco:checked ~ label[for="eco"],
+        #eco:checked ~ .eco-box{
+            background-color: #8ef18e;
+            color: #045304;
+        }
+    /*Language*/
+        #vi:checked ~ .vi-box {
+            font-size: large;
+        }
+        #en:checked ~ .eng-box {
+            font-size: large;
+        }
+        /*Options*/
+        #advanced:checked ~ label[for="advanced"],
+        #advanced:checked ~ .advanced-box{
+            background-color: #ffff82;
+            color: #351302;
+        }
+    </style>
+</head>
+<body>
+<!--Trung tâm cấu hình giao diện (Demo)-->
+<h1>Trung tâm cấu hình giao diện (Demo)</h1>
+<p>Chọn giao diện (Theme):</p>
+<input type="radio" name="theme" id="light">
+<label for="light">Light</label>
+<input type="radio" name="theme" id="dark">
+<label for="dark">Dark</label>
+<!--Chọn màu chủ đạo (Color):-->
+<p>Chọn màu chủ đạo (Color):</p>
+<input type="radio" name="main color" id="red">
+<label for="red">Red</label>
+<input type="radio" name="main color" id="blue">
+<label for="blue">Blue</label>
+<input type="radio" name="main color" id="green">
+<label for="green">Green</label>
+<!--Chọn ngôn ngữ (Language):-->
+<p>Chọn ngôn ngữ (Language):</p>
+<input type="radio" name="language" id="vi">
+<label for="vi">VI</label>
+<input type="radio" name="language" id="en">
+<label for="en">EN</label>
+<!--Tùy chọn bổ sung (Options - Checkbox):-->
+<p>Tùy chọn bổ sung (Options - Checkbox):</p>
+<input type="checkbox" name="option" id="advanced">
+<label for="advanced">Hiển thị mô tả nâng cao</label>
+<input type="checkbox" name="option" id="eco">
+<label for="eco">Bật chế độ Eco</label>
+<input type="checkbox" name="option" id="importance">
+<label for="importance">Hiển thị cảnh báo quan trọng</label>
+<!--Theme-->
+<div class="box light-box">
+    <span>Theme Light: Giao diện sáng, chữ đen.</span>
+</div>
+<div class="box dark-box">
+    <span>Theme Dark: Giao diện tối, chữ sáng.</span>
+</div>
+<!--Main color-->
+<div class="box red-box">
+    <span>Màu Red: được nhấn mạnh khi chọn Red.</span>
+</div>
+<div class="box blue-box">
+    <span>Màu Blue: được nhấn mạnh khi chọn Blue.</span>
+</div>
+<div class="box green-box">
+    <span>Màu Green: được nhấn mạnh khi chọn Green.</span>
+</div>
+<!--Language-->
+<div class="box vi-box">
+    <span>[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</span>
+</div>
+<div class="box eng-box">
+    <span>[EN] Hello, world! Khi chọn EN, dòng này rõ hơn.</span>
+</div>
+<!--Options-->
+<div class="box advanced-box">
+    <span>Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</span>
+</div>
+<div class="box eco-box">
+    <span>Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</span>
+</div>
+<div class="box importance-box">
+    <span>Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</span>
+</div>
+</body>
+</html>
