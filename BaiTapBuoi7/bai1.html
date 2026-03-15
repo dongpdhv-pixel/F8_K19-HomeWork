@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        h1  {
+        h1 {
             width: 100%;
             background-color: orange;
             color: #f2f2f2;
@@ -18,67 +18,73 @@
             background: #f5f5f5;
             width: 100%;
         }
+
         span {
             opacity: 0.5;
         }
+
         /*Theme*/
         #light:checked ~ label[for="light"],
-        #light:checked ~ .light-box {
-            background-color: bisque;
+        #light:checked ~ .light-box,
+        #advanced:checked ~ label[for="advanced"],
+        #advanced:checked ~ .advanced-box{
+            background-color: #ffff82;
+            color: #351302;
         }
+
         #dark:checked ~ label[for="dark"],
         #dark:checked ~ .dark-box {
             background-color: #1b1515;
             color: white;
         }
+
         /*Opacity*/
         #light:checked ~ .light-box span,
-        #dark:checked ~ .dark-box span,#red:checked ~ .red-box span,
+        #dark:checked ~ .dark-box span, #red:checked ~ .red-box span,
         #blue:checked ~ .blue-box span,
-        #green:checked~.green-box span,
+        #green:checked ~ .green-box span,
         #vi:checked ~ .vi-box span,
         #en:checked ~ .eng-box span,
         #advanced:checked ~ .advanced-box span,
         #eco:checked ~ .eco-box span,
-        #importance:checked ~ .importance-box span{
+        #importance:checked ~ .importance-box span {
             opacity: 1;
         }
-    /*Main color*/
+
+        /*Main color*/
         #red:checked ~ label[for="red"],
         #red:checked ~ .red-box,
         #importance:checked ~ label[for="importance"],
-        #importance:checked ~ .importance-box{
+        #importance:checked ~ .importance-box {
             background-color: rgba(255, 144, 144, 0.79);
             color: red;
         }
+
         #en:checked ~ label[for="en"],
         #blue:checked ~ label[for="blue"],
         #blue:checked ~ .blue-box,
-        #en:checked ~ .eng-box{
+        #en:checked ~ .eng-box {
             background-color: rgba(70, 135, 211, 0.79);
             color: blue;
         }
+
         #green:checked ~ label[for="green"],
         #vi:checked ~ label[for="vi"],
         #green:checked ~ .green-box,
         #vi:checked ~ .vi-box,
         #eco:checked ~ label[for="eco"],
-        #eco:checked ~ .eco-box{
+        #eco:checked ~ .eco-box {
             background-color: #8ef18e;
             color: #045304;
         }
-    /*Language*/
+
+        /*Language*/
         #vi:checked ~ .vi-box {
             font-size: large;
         }
+
         #en:checked ~ .eng-box {
             font-size: large;
-        }
-        /*Options*/
-        #advanced:checked ~ label[for="advanced"],
-        #advanced:checked ~ .advanced-box{
-            background-color: #ffff82;
-            color: #351302;
         }
     </style>
 </head>
