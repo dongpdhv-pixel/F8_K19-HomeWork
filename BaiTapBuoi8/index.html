@@ -19,10 +19,11 @@
             padding: 20px;
         }
         .preview {
-            width: 70%;
-            background: #9fb9c6;
             padding: 40px;
-            margin: 30px 70px 0 0;
+        }
+        .title {
+            font-weight: bold;
+            margin-left: 10px;
         }
         /*Input*/
         input[type="radio"] {
@@ -77,20 +78,25 @@
             font-weight: bold;
         }
         /*Backgroud*/
-        #background-light:checked ~ .preview {
+        #background-light:checked ~ .all-preview {
             background: white;
         }
-        #background-gray:checked ~ .preview {
+        #background-gray:checked ~ .all-preview {
             background:lightgrey;
         }
-        #background-yellow:checked ~ .preview {
+        #background-yellow:checked ~ .all-preview {
             background:lightyellow;
         }
-        #background-blue:checked ~ .preview {
+        #background-blue:checked ~ .all-preview {
             background:lightblue;
         }
-        #background-pink:checked ~ .preview {
+        #background-pink:checked ~ .all-preview {
             background: pink;
+        }
+        .all-preview {
+            min-height: 100vh;
+            width: 70%;
+            background: #9fb9c6;
         }
     /*Size-name*/
         html {
@@ -99,78 +105,78 @@
         .name {
             font-size: 2rem;
         }
-        #size-small:checked ~ .preview .name  {
-            font-size: 1rem;
-        }
-        #size-medium:checked ~ .preview .name  {
+        #size-small:checked ~ .all-preview .name  {
             font-size: 2rem;
         }
-        #size-large:checked ~ .preview .name  {
-            font-size: 3rem;
+        #size-medium:checked ~ .all-preview .name  {
+            font-size: 2.5rem;
+        }
+        #size-large:checked ~ .all-preview .name  {
+            font-size: 2.75rem;
         }
     /*Font*/
-        #normal:checked ~ .preview .name  {
+        #normal:checked ~ .all-preview .name  {
             text-transform: none;
         }
-        #uppercase:checked ~ .preview .name  {
+        #uppercase:checked ~ .all-preview .name  {
             text-transform: uppercase;
         }
     /*    Name color*/
-        #name-dark:checked ~ .preview .name  {
+        #name-dark:checked ~ .all-preview .name  {
             color: black;
         }
-        #name-blue:checked ~ .preview .name  {
+        #name-blue:checked ~ .all-preview .name  {
             color: blue;
         }
-        #name-red:checked ~ .preview .name  {
+        #name-red:checked ~ .all-preview .name  {
             color: red;
         }
-        #name-green:checked ~ .preview .name  {
+        #name-green:checked ~ .all-preview .name  {
             color: green;
         }
-        #alignment-left:checked ~ .preview {
+        #alignment-left:checked ~ .all-preview .preview {
             text-align: left;
         }
-        #alignment-center:checked ~ .preview {
+        #alignment-center:checked ~ .all-preview .preview {
             text-align: center;
         }
-        #alignment-right:checked ~ .preview {
+        #alignment-right:checked ~ .all-preview .preview {
             text-align: right;
         }
-        #job-small:checked ~ .preview .job  {
+        #job-small:checked ~ .all-preview .job  {
+            font-size: 0.9rem;
+        }
+        #job-medium:checked ~ .all-preview .job  {
             font-size: 1rem;
         }
-        #job-medium:checked ~ .preview .job  {
-            font-size: 2rem;
+        #job-large:checked ~ .all-preview .job  {
+            font-size: 1.3rem;
         }
-        #job-large:checked ~ .preview .job  {
-            font-size: 3rem;
-        }
-        #job-tight:checked ~ .preview .job  {
+        #job-tight:checked ~ .all-preview .job  {
             letter-spacing: 0.03em;
         }
-        #job-normal:checked ~ .preview .job  {
+        #job-normal:checked ~ .all-preview .job  {
             letter-spacing: 0.02em;
         }
-        #job-wide:checked ~ .preview .job  {
+        #job-wide:checked ~ .all-preview .job  {
             letter-spacing: 0.18em;
         }
-        #description-small:checked ~ .preview > p {
+        #description-small:checked ~ .all-preview > .preview > .describe {
+            font-size: 0.9rem;
+        }
+        #description-large:checked ~ .all-preview > .preview > .describe  {
+            font-size: 1.123rem;
+        }
+        #description-medium:checked ~ .all-preview > .preview > .describe   {
             font-size: 1rem;
         }
-        #description-large:checked ~ .preview > p  {
-            font-size: 2.5rem;
-        }
-        #description-medium:checked ~ .preview > p  {
-            font-size: 2rem;
-        }
-        #line-tight:checked ~ .preview > p  {
+        #line-tight:checked ~ .all-preview > .preview > .describe {
             letter-spacing: 0.1rem;
         }
-        #line-normal:checked ~ .preview > p  {
+        #line-normal:checked ~ .all-preview > .preview > .describe  {
             letter-spacing: normal;
         }
-        #line-loose:checked ~ .preview > p  {
+        #line-loose:checked ~ .all-preview > .preview > .describe  {
             letter-spacing: 0.2rem;
         }
 
@@ -194,11 +200,11 @@
             margin: 4px;
             cursor: pointer;
         }
-        #contact-dark:checked ~ .preview .contact-now {
+        #contact-dark:checked ~ .all-preview .contact-now {
             background: black;
             color: white;
         }
-        #contact-blue:checked ~ .preview .contact-now {
+        #contact-blue:checked ~ .all-preview .contact-now {
             background: blue;
             color: white;
         }
@@ -326,34 +332,35 @@
             <label for="contact-light">Light</label>
         </div>
     </div>
-
 <!--    preview-->
-    <div class="preview">
-        <h2 class="preview-title">Preview hồ sơ cá nhân</h2>
-        <h1 class="name">Nguyễn Minh Khoa</h1>
-        <h3 class="job">Frontend Developer · Ho Chi Minh City</h3>
-        <p>Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào hiệu
-            suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.</p>
-        <h4>Kỹ năng</h4>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Figma</li>
-            <li>Git</li>
-        </ul>
-        <h4>Sở thích</h4>
-        <div class="interest" >
+    <div class="all-preview">
+        <p class="title">Preview hồ sơ cá nhân</p>
+        <div class="preview">
+            <h1 class="name">Nguyễn Minh Khoa</h1>
+            <h3 class="job">Frontend Developer · Ho Chi Minh City</h3>
+            <p class="describe">Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào hiệu
+                suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.</p>
+            <h4>Kỹ năng</h4>
             <ul>
-                <li>Nhiếp ảnh</li>
-                <li>Đọc sách</li>
-                <li>Du lịch</li>
-                <li>Cà phê</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Figma</li>
+                <li>Git</li>
             </ul>
-        </div>
-        <div class="contact">
-            <button class="contact-now">Liên hệ với tôi</button>
+            <h4>Sở thích</h4>
+            <div class="interest" >
+                <ul>
+                    <li>Nhiếp ảnh</li>
+                    <li>Đọc sách</li>
+                    <li>Du lịch</li>
+                    <li>Cà phê</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <button class="contact-now">Liên hệ với tôi</button>
+            </div>
         </div>
     </div>
 </div>
