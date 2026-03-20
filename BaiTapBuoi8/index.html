@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang=vi>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hồ sơ cá nhân</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+        }
+        .controls {
+            width: 30%;
+            background: #eee;
+            padding: 20px;
+        }
+        .preview {
+            width: 70%;
+            background: #9fb9c6;
+            padding: 40px;
+            margin: 30px 70px 0 0;
+        }
+        /*Input*/
+        input[type="radio"] {
+            display: none;
+        }
+        label {
+            display: inline-block;
+            padding: 6px 10px;
+            background: white;
+            margin: 4px;
+            cursor: pointer;
+        }
+        input[type="radio"]:checked + label {
+            font-weight: bold;
+            background: #333;
+        }
+
+        #background-light:checked ~ .controls label[for="background-light"],
+        #background-gray:checked ~ .controls label[for="background-gray"],
+        #background-yellow:checked ~ .controls label[for="background-yellow"],
+        #background-blue:checked ~ .controls label[for="background-blue"],
+        #background-pink:checked ~ .controls label[for="background-pink"],
+        #size-small:checked ~ .controls label[for="size-small"],
+        #size-large:checked ~ .controls label[for="size-large"],
+        #size-medium:checked ~ .controls label[for="size-medium"],
+        #normal:checked ~ .controls label[for="normal"],
+        #uppercase:checked ~ .controls label[for="uppercase"],
+        #name-dark:checked ~ .controls label[for="name-dark"],
+        #name-blue:checked ~ .controls label[for="name-blue"],
+        #name-green:checked ~ .controls label[for="name-green"],
+        #name-red:checked ~ .controls label[for="name-red"],
+        #alignment-left:checked ~ .controls label[for="alignment-left"],
+        #alignment-right:checked ~ .controls label[for="alignment-right"],
+        #alignment-center:checked ~ .controls label[for="alignment-center"],
+        #job-small:checked ~ .controls label[for="job-small"],
+        #job-large:checked ~ .controls label[for="job-large"],
+        #job-medium:checked ~ .controls label[for="job-medium"],
+        #job-tight:checked ~ .controls label[for="job-tight"],
+        #job-normal:checked ~ .controls label[for="job-normal"],
+        #job-wide:checked ~ .controls label[for="job-wide"],
+        #description-small:checked ~ .controls label[for="description-small"],
+        #description-large:checked ~ .controls label[for="description-large"],
+        #description-medium:checked ~ .controls label[for="description-medium"],
+        #line-tight:checked ~ .controls label[for="line-tight"],
+        #line-normal:checked ~ .controls label[for="line-normal"],
+        #line-loose:checked ~ .controls label[for="line-loose"],
+        #contact-dark:checked ~ .controls label[for="contact-dark"],
+        #contact-light:checked ~ .controls label[for="contact-light"],
+        #contact-blue:checked ~ .controls label[for="contact-blue"] {
+            background: #bbb;
+            color: black;
+            font-weight: bold;
+        }
+        /*Backgroud*/
+        #background-light:checked ~ .preview {
+            background: white;
+        }
+        #background-gray:checked ~ .preview {
+            background:lightgrey;
+        }
+        #background-yellow:checked ~ .preview {
+            background:lightyellow;
+        }
+        #background-blue:checked ~ .preview {
+            background:lightblue;
+        }
+        #background-pink:checked ~ .preview {
+            background: pink;
+        }
+    /*Size-name*/
+        html {
+            font-size: 16px;
+        }
+        .name {
+            font-size: 2rem;
+        }
+        #size-small:checked ~ .preview .name  {
+            font-size: 1rem;
+        }
+        #size-medium:checked ~ .preview .name  {
+            font-size: 2rem;
+        }
+        #size-large:checked ~ .preview .name  {
+            font-size: 3rem;
+        }
+    /*Font*/
+        #normal:checked ~ .preview .name  {
+            text-transform: none;
+        }
+        #uppercase:checked ~ .preview .name  {
+            text-transform: uppercase;
+        }
+    /*    Name color*/
+        #name-dark:checked ~ .preview .name  {
+            color: black;
+        }
+        #name-blue:checked ~ .preview .name  {
+            color: blue;
+        }
+        #name-red:checked ~ .preview .name  {
+            color: red;
+        }
+        #name-green:checked ~ .preview .name  {
+            color: green;
+        }
+        #alignment-left:checked ~ .preview {
+            text-align: left;
+        }
+        #alignment-center:checked ~ .preview {
+            text-align: center;
+        }
+        #alignment-right:checked ~ .preview {
+            text-align: right;
+        }
+        #job-small:checked ~ .preview .job  {
+            font-size: 1rem;
+        }
+        #job-medium:checked ~ .preview .job  {
+            font-size: 2rem;
+        }
+        #job-large:checked ~ .preview .job  {
+            font-size: 3rem;
+        }
+        #job-tight:checked ~ .preview .job  {
+            letter-spacing: 0.03em;
+        }
+        #job-normal:checked ~ .preview .job  {
+            letter-spacing: 0.02em;
+        }
+        #job-wide:checked ~ .preview .job  {
+            letter-spacing: 0.18em;
+        }
+        #description-small:checked ~ .preview > p {
+            font-size: 1rem;
+        }
+        #description-large:checked ~ .preview > p  {
+            font-size: 2.5rem;
+        }
+        #description-medium:checked ~ .preview > p  {
+            font-size: 2rem;
+        }
+        #line-tight:checked ~ .preview > p  {
+            letter-spacing: 0.1rem;
+        }
+        #line-normal:checked ~ .preview > p  {
+            letter-spacing: normal;
+        }
+        #line-loose:checked ~ .preview > p  {
+            letter-spacing: 0.2rem;
+        }
+
+    /*    Skill*/
+        ul li {
+            display:inline-block;
+            padding: 6px 10px;
+            background: white;
+            margin: 4px;
+            cursor: pointer;
+        }
+        .interest li {
+            border: none;
+            background: none;
+            padding: 0;
+        }
+        button {
+            color: black;
+            padding: 10px 30px;
+            background: white;
+            margin: 4px;
+            cursor: pointer;
+        }
+        #contact-dark:checked ~ .preview .contact-now {
+            background: black;
+            color: white;
+        }
+        #contact-blue:checked ~ .preview .contact-now {
+            background: blue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+<!--    1.Màu nền hồ sơ-->
+    <input type="radio" name="background" id="background-light">
+    <input type="radio" name="background" id="background-gray">
+    <input type="radio" name="background" id="background-yellow">
+    <input type="radio" name="background" id="background-blue">
+    <input type="radio" name="background" id="background-pink">
+<!--2.Kích thước tên-->
+    <input type="radio" name="size-name" id="size-small">
+    <input type="radio" name="size-name" id="size-medium">
+    <input type="radio" name="size-name" id="size-large">
+<!--3.Kiểu chữ tên-->
+    <input type="radio" name="font" id="normal">
+    <input type="radio" name="font" id="uppercase">
+<!--4.Màu chữ tên-->
+    <input type="radio" name="name-color" id="name-dark">
+    <input type="radio" name="name-color" id="name-blue">
+    <input type="radio" name="name-color" id="name-green">
+    <input type="radio" name="name-color" id="name-red">
+<!--5.Căn lề hồ sơ-->
+    <input type="radio" name="text-alignment" id="alignment-left">
+    <input type="radio" name="text-alignment" id="alignment-center">
+    <input type="radio" name="text-alignment" id="alignment-right">
+<!--6.Kích thước nghề nghiệp-->
+    <input type="radio" name="job-title-size" id="job-small">
+    <input type="radio" name="job-title-size" id="job-medium">
+    <input type="radio" name="job-title-size" id="job-large">
+<!--7.Khoảng cách chữ nghề nghiệp-->
+    <input type="radio" name="job-letter-spacing" id="job-tight">
+    <input type="radio" name="job-letter-spacing" id="job-normal">
+    <input type="radio" name="job-letter-spacing" id="job-wide">
+<!--8.Kích thước mô tả-->
+    <input type="radio" name="description-size" id="description-small">
+    <input type="radio" name="description-size" id="description-medium">
+    <input type="radio" name="description-size" id="description-large">
+<!--9.Giãn dòng mô tả-->
+    <input type="radio" name="description-line-height" id="line-tight">
+    <input type="radio" name="description-line-height" id="line-normal">
+    <input type="radio" name="description-line-height" id="line-loose">
+<!--10.Màu nút liên hệ-->
+    <input type="radio" name="color-contact" id="contact-dark">
+    <input type="radio" name="color-contact" id="contact-blue">
+    <input type="radio" name="color-contact" id="contact-light">
+
+    <div class="controls">
+        <h3>Tùy chỉnh hồ sơ</h3>
+        <!--1.Màu nền hồ sơ-->
+        <div class="group">
+            <p>1.Màu nền hồ sơ</p>
+            <label for="background-light">Light</label>
+            <label for="background-gray">Gray</label>
+            <label for="background-yellow">Yellow</label>
+            <label for="background-blue">Blue</label>
+            <label for="background-pink">Pink</label>
+
+        </div>
+        <!--2.Kích thước tên-->
+        <div class="group">
+            <p>2.Kích thước tên</p>
+            <label for="size-small">Small</label>
+            <label for="size-medium">Medium</label>
+            <label for="size-large">Large</label>
+        </div>
+        <!--3.Kiểu chữ tên-->
+        <div class="group">
+            <p>3.Kiểu chữ tên</p>
+            <label for="normal">Normal</label>
+            <label for="uppercase">Uppercase</label>
+        </div>
+        <!--        4.Màu chữ tên-->
+        <div class="group">
+            <p>4.Màu chữ tên</p>
+            <label for="name-dark">Dark</label>
+            <label for="name-blue">Blue</label>
+            <label for="name-green">Green</label>
+            <label for="name-red">Red</label>
+        </div>
+        <!--        5.Căn lề hồ sơ-->
+        <div class="group">
+            <p>5.Căn lề hồ sơ</p>
+            <label for="alignment-left">Left</label>
+            <label for="alignment-center">Center</label>
+            <label for="alignment-right">Right</label>
+        </div>
+        <!--        6.Kích thước nghề nghiệp-->
+        <div class="group">
+            <p>6.Kích thước nghề nghiệp</p>
+            <label for="job-small">Small</label>
+            <label for="job-medium">Medium</label>
+            <label for="job-large">Large</label>
+        </div>
+        <!--        7.Khoảng cách chữ nghề nghiệp-->
+        <div class="group">
+            <p>7.Khoảng cách chữ nghề nghiệp</p>
+           <label for="job-tight">Tight</label>
+            <label for="job-normal">Normal</label>
+            <label for="job-wide">Wide</label>
+        </div>
+        <!--        8.Kích thước mô tả-->
+        <div class="group">
+            <p>8.Kích thước mô tả</p>
+            <label for="description-small">Small</label>
+            <label for="description-medium">Medium</label>
+            <label for="description-large">Large</label>
+        </div>
+        <!--        9.Giãn dòng mô tả-->
+        <div class="group">
+            <p>9.Giãn dòng mô tả</p>
+            <label for="line-tight">Tight</label>
+            <label for="line-normal">Normal</label>
+            <label for="line-loose">Loose</label>
+        </div>
+        <!--        10.Màu nút liên hệ-->
+        <div class="group">
+            <p>10.Màu nút liên hệ</p>
+            <label for="contact-dark">Dark</label>
+            <label for="contact-blue">Blue</label>
+            <label for="contact-light">Light</label>
+        </div>
+    </div>
+
+<!--    preview-->
+    <div class="preview">
+        <h2 class="preview-title">Preview hồ sơ cá nhân</h2>
+        <h1 class="name">Nguyễn Minh Khoa</h1>
+        <h3 class="job">Frontend Developer · Ho Chi Minh City</h3>
+        <p>Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào hiệu
+            suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế.</p>
+        <h4>Kỹ năng</h4>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Figma</li>
+            <li>Git</li>
+        </ul>
+        <h4>Sở thích</h4>
+        <div class="interest" >
+            <ul>
+                <li>Nhiếp ảnh</li>
+                <li>Đọc sách</li>
+                <li>Du lịch</li>
+                <li>Cà phê</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <button class="contact-now">Liên hệ với tôi</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
