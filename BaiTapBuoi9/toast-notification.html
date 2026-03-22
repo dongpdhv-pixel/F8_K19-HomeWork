@@ -8,7 +8,7 @@
         #toast-toggle {
             display: none;
         }
-
+        /*Nút hiện thông báo*/
         .open-btn {
             padding: 10px 20px;
             background-color: #272323;
@@ -20,13 +20,7 @@
         .open-btn:hover {
             background-color: #bbb;
         }
-        .toast {
-            background: green;
-            padding: 15px;
-        }
-        span {
-            display: inline-block;
-        }
+        /*Phần thành  công*/
         .toast {
             background: #3d9f3d;
             top: 20px;
@@ -36,6 +30,9 @@
             align-items: center;
             color: white;
             font-weight: bold;
+        }
+        span {
+            display: inline-block;
         }
         .close-btn {
             margin-left: 10px;
@@ -48,6 +45,7 @@
         .close-btn:hover {
             background-color: #bbb;
         }
+        /*ấn nút*/
         #toast-toggle:checked~.toast {
             display: inline-flex;
         }
