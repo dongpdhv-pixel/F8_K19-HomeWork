@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #modal-toggle {
+            display: none;
+        }
+
+        .open-btn {
+            background: #3b82f6;
+            color: #ffffff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .open-btn:hover {
+            background: #958f8f;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        /* mở modal */
+        #modal-toggle:checked ~ .overlay {
+            display: flex;
+        }
+
+        .content {
+            text-align: center;
+            background: white;
+            padding: 50px 120px;
+            margin-right: 40%;
+        }
+
+        .close-btn {
+            background: #ef4444;
+            color: #ffffff;
+            padding: 10px 40px;
+            cursor: pointer;
+            display: block;
+            margin-left: 0;
+            width: fit-content;
+        }
+        .close-btn:hover {
+            background: #bbb;
+        }
+
+        .overlay-bg {
+           width: 100vw;
+            height: 100vh;
+        }
+
+        #close-modal:checked ~ .overlay {
+            display: none;
+        }
+    </style>
+
+<body>
+<div class="modal">
+    <input type="checkbox" id="modal-toggle">
+    <label for="modal-toggle" class="open-btn">Mở modal</label>
+    <div class="overlay">
+        <label for="modal-toggle" class="overlay-bg"></label>
+        <div class="content">
+            <p class="text">Đây là nội dung thông báo!</p>
+            <label for="modal-toggle" class="close-btn">Đóng</label>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
