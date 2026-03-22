@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
         #modal-toggle {
             display: none;
         }
-
+        /*Nút mở modal*/
         .open-btn {
             background: #3b82f6;
             color: #ffffff;
@@ -18,7 +19,7 @@
         .open-btn:hover {
             background: #958f8f;
         }
-
+        /*Phần overlay*/
         .overlay {
             background: rgba(0, 0, 0, 0.5);
             width: 100vw;
@@ -27,18 +28,18 @@
             align-items: center;
             display: none;
         }
-        /* mở modal */
+        /* Mở modal */
         #modal-toggle:checked ~ .overlay {
             display: flex;
         }
-
+        /*Nội dung*/
         .content {
             text-align: center;
             background: white;
             padding: 50px 120px;
             margin-right: 40%;
         }
-
+        /*Nút đóng*/
         .close-btn {
             background: #ef4444;
             color: #ffffff;
@@ -51,12 +52,12 @@
         .close-btn:hover {
             background: #bbb;
         }
-
+        /*Ấn lớp overlay sẽ đóng modal*/
         .overlay-bg {
            width: 100vw;
             height: 100vh;
         }
-
+        /*Ấn đóng sẽ đóng modal*/
         #close-modal:checked ~ .overlay {
             display: none;
         }
