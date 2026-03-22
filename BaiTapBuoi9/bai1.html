@@ -10,6 +10,16 @@
         .group-1,
         .group-2 {
             display: flex;
+            gap: 30px;
+            align-items: flex-end;
+        }
+        .name {
+            font-weight: bold;
+            text-align: center;
+        }
+        .group-2 {
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
         .square {
             width: 100px;
@@ -20,14 +30,14 @@
             width: 200px;
             height: 100px;
             border: 5px solid blue;
-            margin-left: 10px;
+
         }
         .striangle-up {
             width: 0;
             border-right: 40px solid transparent ;
             border-left: 40px solid transparent ;
             border-bottom: 80px solid #4cd84c;
-            margin-left: 10px;
+
         }
         .striangle-down {
             width: 0;
@@ -49,7 +59,7 @@
             border-top: 40px solid transparent;
             border-bottom: 40px solid transparent;
             margin-top: 30px;
-            margin-left: 20px;
+
         }
         .trapezium {
             width: 100px;
@@ -141,24 +151,64 @@
         }
 
     </style>
+
 </head>
 <body>
 <div class="group-1">
-    <div class="square"></div>
-    <div class="rectangle"></div>
-    <div class="striangle-up"></div>
-    <div class="striangle-down"></div>
-    <div class="striangle-left"></div>
-    <div class="striangle-right"></div>
-    <div class="trapezium"></div>
+    <div class="name">
+        <div class="square"></div>
+        <p>1.Hình vuông</p>
+    </div>
+    <div class="name">
+        <div class="rectangle"></div>
+        <p>2.Hình chữ nhật</p>
+    </div>
+    <div class="name">
+        <div class="striangle-up"></div>
+        <p>3.Tam giác lên</p>
+    </div>
+    <div class="name">
+        <div class="striangle-down"></div>
+        <p>4.Tam giác xuống</p>
+    </div>
+    <div class="name">
+        <div class="striangle-left"></div>
+        <p>5.Tam giác trái</p>
+    </div>
+    <div class="name">
+        <div class="striangle-right"></div>
+        <p>6.Tam giác phải</p>
+    </div>
+    <div class="name">
+        <div class="trapezium"></div>
+        <p>7.Hình thang</p>
+    </div>
 </div>
 <div class="group-2">
-    <div class="wide-triangle"></div>
-    <div class="acute-triangle"></div>
-    <div class="isosceles-triangle"></div>
-    <div class="right-arrow"></div>
-    <div class="left-arrow"></div>
-    <div class="ribbon"></div>
+    <div class="name">
+        <div class="wide-triangle"></div>
+        <p>8.Tam giác rộng</p>
+    </div>
+    <div class="name">
+        <div class="acute-triangle"></div>
+        <p>9.Tam giác nhọn</p>
+    </div>
+    <div class="name">
+        <div class="isosceles-triangle"></div>
+        <p>10.Tam giác cân</p>
+    </div>
+    <div class="name">
+        <div class="right-arrow"></div>
+        <p>11.Mũi tên phải</p>
+    </div>
+    <div class="name">
+        <div class="left-arrow"></div>
+        <p>12.Mũi tên trái</p>
+    </div>
+    <div class="name">
+        <div class="ribbon"></div>
+        <p>13.Ribbon/Lá cờ</p>
+    </div>
 </div>
 <div class="logo">
     <div class="f8">
@@ -169,6 +219,7 @@
         <div class="s8-logo-1"></div>
         <div class="s8-logo-2"></div>
     </div>
+
 </div>
 </body>
 </html>
