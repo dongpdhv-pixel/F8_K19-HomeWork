@@ -1,0 +1,105 @@
+* {
+    font-family: Arial, sans-serif;
+}
+.logo {
+    width: 38px;
+}
+.fa-caret-down {
+    color: #bbb;
+    width: 10px;
+    margin: 10px;
+}
+.navbar-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-weight: bold;
+    color: #333333;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid #ddd;
+
+}
+.navbar-header ul li:hover {
+    color: #d62828;
+    text-decoration: underline 2px solid #d62828;
+}
+.navbar-header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+.navbar li {
+    position: relative;
+}
+
+.menu-news,
+.world-menu,
+.business,
+.look{
+    display: none;
+    color: #333333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 10px;
+    min-width: 200px;
+}
+.menu-news li,
+.world-menu li,
+.business li,
+.look li {
+    padding: 8px 10px;
+    border-radius: 4px;}
+
+.menu-news li:hover,
+.world-menu li:hover,
+.business li:hover,
+.look li:hover {
+    background: #f0f0f0; /* màu xám nhạt */
+
+}
+.menu-news ul,
+.world-menu ul,
+.business ul,
+.look ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.navbar li:hover .menu-news,
+.navbar li:hover .world-menu,
+.navbar li:hover .business,
+.navbar li:hover .look,
+.menu-news:hover .society,
+.world-menu:hover .zone,
+.business:hover .personal,
+.look:hover .master
+{
+    display: block;
+}
+
+.society,
+.zone,
+.personal,
+.master {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 6px 10px;
+    min-width: 200px;
+}
+.master:f
+
+
+
