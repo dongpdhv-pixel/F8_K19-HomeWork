@@ -9,6 +9,11 @@
     width: 10px;
     margin: 10px;
 }
+.box {
+    width: 555px;
+    height: 300px;
+    border: 1px solid #bbb;
+}
 .navbar-header {
     position: absolute;
     display: flex;
@@ -19,6 +24,7 @@
     padding: 6px;
     background: #fff;
     border: 1px solid #ddd;
+
 
 }
 .navbar-header ul li:hover {
@@ -55,10 +61,11 @@
 .world-menu li,
 .business li,
 .look li {
+    position: relative;
     padding: 8px 10px;
     border-radius: 4px;}
 
-.menu-news li:hover,
+.menu-news .society li:hover,
 .world-menu li:hover,
 .business li:hover,
 .look li:hover {
@@ -76,14 +83,18 @@
 .navbar li:hover .menu-news,
 .navbar li:hover .world-menu,
 .navbar li:hover .business,
-.navbar li:hover .look,
-.menu-news:hover .society,
-.world-menu:hover .zone,
-.business:hover .personal,
-.look:hover .master
-{
+.navbar li:hover .look {
     display: block;
 }
+
+.menu-news li:hover .society,
+.world-menu li:hover .zone,
+.business li:hover .personal,
+.look li:hover .master {
+    color: #333333;
+    display: block;
+}
+
 
 .society,
 .zone,
@@ -99,7 +110,7 @@
     padding: 6px 10px;
     min-width: 200px;
 }
-.master:f
+
 
 
 
