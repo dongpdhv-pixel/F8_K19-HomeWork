@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Roboto Light" , sans-serif;
+    color: #666666;
+}
+.bg {
+    background-color: #ebf5fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+
+}
+.card-1,
+.card-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/*CSS card*/
+.card-ui,
+.theme,
+.digital,
+.website,
+.responsive,
+.quick{
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+/*CSS header*/
+
+.header-ui,
+.header-theme,
+.header-digital,
+.header-web,
+.header-responsive,
+.header-quick{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/*CSS Icon*/
+.icon-ui,
+.icon-theme,
+.icon-digital,
+.icon-web,
+.icon-responsive,
+.icon-quick{
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-theme {
+    background-color: #4ecdc4;
+}
+.icon-digital {
+    background-color: #f9a825;
+}
+.icon-web {
+    background-color: #5e9cff;
+}
+.icon-responsive {
+    background-color: #9b59b6;
+}
+.icon-quick {
+    background-color: #7cb342;
+}
+
+/*Hover boder*/
+
+.card-ui:hover{
+    border: 3px solid #ff6b6b;
+}
+.theme:hover{
+    border: 3px solid #4ecdc4;
+}
+.digital:hover {
+    border: 3px solid #f9a825;
+}
+.website:hover {
+    border: 3px solid #5e9cff;
+}
+.responsive:hover {
+    border: 3px solid #9b59b6;
+}
+.quick:hover {
+    border: 3px solid #7cb342;
+}
+
+/*CSS h3*/
+
+.header-ui h3,
+.header-theme h3,
+.header-digital h3,
+.header-web h3,
+.header-responsive h3,
+.header-quick h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.3;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+/*CSS p*/
+.content-ui p,
+.content-theme p,
+.content-digital p,
+.content-web p,
+.content-responsive p,
+.content-quick p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/*CSS a*/
+
+.content-ui a,
+.content-theme a,
+.content-digital a,
+.content-web a,
+.content-responsive a,
+.content-quick a {
+    text-decoration: none;
+    color: #2196f3;
+    font-weight: 500;
+    font-size: 15px;
+}
+.content-ui a:hover,
+.content-theme a:hover,
+.content-digital a:hover,
+.content-web a:hover,
+.content-responsive a:hover,
+.content-quick a:hover{
+    text-decoration: underline;
+}
