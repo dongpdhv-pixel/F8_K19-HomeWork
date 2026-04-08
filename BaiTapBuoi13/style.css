@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.strips-1:hover .overlay,
+.strips-2:hover .overlay,
+.strips-3:hover .overlay,
+.strips-4:hover .overlay,
+.strips-5:hover .overlay{
+    opacity: 1;
+}
+
+.strips-1,
+.strips-2,
+.strips-3,
+.strips-4,
+.strips-5{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100vh;
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+    background-color: forestgreen;
+    cursor: pointer;
+}
+.strips-2 {
+    background-color: khaki;
+}
+.strips-3 {
+    background-color: dodgerblue;
+}
+.strips-4 {
+    background-color: orange;
+}
+.strips-5 {
+    background-color: violet;
+}
+
+.strips-1:hover p,
+.strips-2:hover p,
+.strips-3:hover p,
+.strips-4:hover p,
+.strips-5:hover p{
+    opacity: 0;
+}
+
+.strips-1:hover {
+    background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.strips-2:hover {
+    background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.strips-3:hover {
+    background-image: url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=800&h=600&fit=crop");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.strips-4:hover {
+    background-image: url("https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=800&h=600&fit=crop");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.strips-5:hover {
+    background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: black;
+    padding: 5px;
+    border-radius: 8px;
+    opacity: 0;
+}
+.strips-1:hover span,
+.strips-2:hover span,
+.strips-3:hover span,
+.strips-4:hover span,
+.strips-5:hover span{
+    opacity: 1;
+}
