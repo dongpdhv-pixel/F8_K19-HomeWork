@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai 14</title>
+
+    <!--    Material Design Icons -->
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!--  Header Navigation   -->
+<input type="checkbox" id="menu-toggle" name="menuToggle">
+<header class="header">
+    <!--    Logo -->
+    <em class="header__logo">My Website</em>
+
+    <!-- Nav menu   -->
+    <nav class="header__nav">
+        <a href="#" class="header__nav-link">Link 1</a>
+        <a href="#" class="header__nav-link">Link 2</a>
+        <a href="#" class="header__nav-link">Link 3</a>
+    </nav>
+
+    <!--  Display on Table/Mobie -->
+    <label for="menu-toggle" class="mdi mdi-close"></label>
+    <label for="menu-toggle" class="header__menu-toggle mdi mdi-menu"></label>
+</header>
+
+<!-- Overlay -->
+<label for="menu-toggle" class="overlay"></label>
+
+<!-- Container Main -->
+<main class="container">
+    <section class="container__content">
+        <!--       Content header -->
+        <div class="content__header">
+            <h1 class="content__header-title">This is the main heading</h1>
+            <p class="content__header-desc">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+            <p class="content__header-desc">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+        </div>
+
+        <!--    Content Cards -->
+        <div class="content__cards">
+            <!--            Card 1 -->
+            <div class="card ">
+                <h2 class="card__header">Card One</h2>
+                <p class="card__body">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado.</p>
+            </div>
+            <!--            Card 2 -->
+            <div class="card">
+                <h2 class="card__header">Card Two</h2>
+                <p class="card__body">Daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+            </div>
+            <!--            Card 3 -->
+            <div class="card">
+                <h2 class="card__header">Card Three</h2>
+                <p class="card__body">Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
+            </div>
+            <!--            Card 4 -->
+            <div class="card">
+                <h2 class="card__header">Card Four</h2>
+                <p class="card__body">Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.</p>
+            </div>
+
+            <!--            Card 5 -->
+            <div class="card">
+                <h2 class="card__header">Card Five</h2>
+                <p class="card__body">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+            </div>
+        </div>
+    </section>
+    <!--    Sidebar -->
+    <aside class="container__sidebar">
+        <h3>Have you discovered all of the other excellent content on this website?</h3>
+    </aside>
+</main>
+</body>
+</html>

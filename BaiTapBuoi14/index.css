@@ -1,0 +1,230 @@
+/* Reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;   /* 1rem = 10px */
+}
+
+body{
+    font-size: 1.6rem;
+
+}
+
+/* Ẩn input checkbox */
+#menu-toggle{
+    display: none;
+}
+
+/*  Header Navigation  */
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: #252323;
+    padding: 1rem 2rem;
+    color: #fafafa;
+}
+
+.header__logo{
+    z-index: 1001;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
+.header__nav-link{
+    text-decoration: none;
+    font-weight: bold;
+    color: #fafafa;
+    margin-left: 2rem;
+}
+
+.header__menu-toggle{
+    display: none;
+}
+
+/* Overlay */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 998;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mdi-close{
+    display: none;
+    z-index: 1000;
+}
+
+/* Layout Container */
+.container{
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1400px;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.container__content{
+    flex: 1;
+}
+
+/* Content header */
+.content__header-title{
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+.content__header-desc{
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar */
+.container__sidebar{
+    width: 300px;
+    min-height: 300px;
+    background:#252323;
+    color: #fafafa;
+    padding: 1rem;
+}
+
+/* Cards Layout */
+.content__cards{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: calc((100% - 2rem) / 3);
+    border: 3px solid #252323;
+}
+
+.card__header{
+    font-size: 1.25rem;
+    background: #252323;
+    color: #fafafa;
+    padding: 1rem;
+}
+
+.card__body{
+    padding: 1rem;
+}
+
+/* Tablet/Mobile (≤ 768px) */
+@media screen and (max-width: 768px){
+
+    .header{
+        padding: 1rem;
+    }
+
+    .header__nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+
+        top: 0;
+        right: -300px; /* Ẩn ra ngoài */
+        width: 300px;
+        height: 100vh;
+        padding: 8rem 2rem;
+
+        background: #3a3a3a;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+
+        z-index: 1000;
+        transition: right 0.3s ease;
+    }
+
+    .header__nav-link{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem 1rem;
+    }
+
+    .header__menu-toggle{
+        display: block;
+    }
+
+    #menu-toggle:checked ~ header > .header__nav{
+        right: 0;
+    }
+
+    #menu-toggle:checked ~ .overlay{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Nút icon X bấm thoát */
+    #menu-toggle:checked ~ header >.mdi-close{
+        display: block;
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        font-size: 2.8rem;
+        transition: transform 0.3s ease;
+        color: #fafafa;
+    }
+    .mdi-close:hover{
+        transform: rotate(90deg);
+    }
+
+    .container{
+        padding: 1rem;
+    }
+
+    .content__cards{
+        gap: 1rem;
+    }
+
+    .card {
+        width: calc((100% - 1rem) / 2);
+    }
+
+    .container__sidebar{
+        width: 250px;
+    }
+}
+
+
+/*  Mobile (≤ 480px) */
+@media screen and (max-width: 480px){
+
+    .header__nav{
+        right: -280px;
+        width: 280px;
+    }
+
+    .container{
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .content__header-title {
+        font-size: 1.5rem;
+    }
+
+    .content__cards {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .container__sidebar{
+        width: 100%;
+        min-height: auto;
+    }
+
+}
