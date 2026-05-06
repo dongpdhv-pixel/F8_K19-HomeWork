@@ -1,0 +1,17 @@
+Bài 1
+1,Student.name không bị thay đổi
+2,student.parent.name có bị thay đổi
+3,Vì : const mentor = { ...student } thực hiện shallow copy , parrent là object, spread thì chỉ copy tham chiếu
+
+Bài 2
+1.student.parent.name KHÔNG bị ảnh hưởng — Deep Clone tạo ra bản copy hoàn toàn độc lập
+2.Khác spread vì JSON.stringify phá vỡ toàn bộ tham chiếu bằng cách serialize thành chuỗi,
+sau đó JSON.parse tạo lại object mới từ đầu — không có bất kỳ tham chiếu chung nào còn sót lại
+
+Bài 3
+1.Mảng không bị thay đổi, spread tạo mảng mới độc lập
+2.Phần tử bên trong có bị thay đổi vì object trong mảng vẫn dùng chung tham chiếu
+
+Bài 4
+-Kết qủa cuổi cùng là 999 vì const newUser = { ...user } chỉ tạo shallow copy , user.address.location là object lồng nhau nên
+newUser.address.location === user.address.location . Khi gán giá trị newUser.address.location.lat = 999 là đã chỉnh sửa object gốc của nó
