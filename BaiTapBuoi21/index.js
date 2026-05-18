@@ -24,4 +24,5 @@ const completedOrderDetails = orders
         };
     });
 
+
 console.log(completedOrderDetails);
