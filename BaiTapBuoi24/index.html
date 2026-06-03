@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" />
+</head>
+<body>
+<div>
+    <header class="flex justify-between p-6 border-b border-gray-200">
+        <div class="flex font-bold">
+            <i class="mdi mdi-cart-outline text-4xl"></i>
+            <h1 class="text-2xl">FakeStore</h1>
+        </div>
+        <div class="flex items-center gap-2 border border-gray-200 rounded-3xl px-3 bg-gray-100">
+            <span class="flex mdi mdi-magnify text-xl"></span>
+            <input type="text" placeholder="Tìm kiếm sản phẩm..." class="pr-20">
+        </div>
+        <div class="relative">
+            <i class="mdi mdi-cart-outline text-xl"></i>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</span>
+        </div>
+    </header>
+
+    <main class="flex gap-8 bg-gray-100 p-6">
+        <div class="flex flex-col gap-3 bg-white border border-gray-200 rounded-xl p-5 w-56 shrink-0">
+            <div class="flex gap-2 border-b border-gray-200 pb-4">
+                <i class="mdi mdi-filter-outline text-3xl"></i>
+                <p class="text-xl font-bold">Danh mục</p>
+            </div>
+            <div class="sidebar-content">
+                <div class="categories-item bg-violet-50 border border-violet-50 rounded-xl pl-2 py-2">
+                    Tất cả sản phẩm
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <p class="text-2xl font-bold">Tất cả sản phẩm</p>
+                <p class="text-gray-500">Hiển thị 20 sản phẩm</p>
+            </div>
+            <div>
+                <div class="product-list grid grid-cols-3 justify-center items-center gap-5 items-stretch pt-5"></div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
