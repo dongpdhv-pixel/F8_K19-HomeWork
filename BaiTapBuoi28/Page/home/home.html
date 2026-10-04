@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Reset cơ bản */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        .header-title { font-weight: 800; font-size: 1.25rem; color: #0f172a; }
+
+        /* Content */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .dot { width: 8px; height: 8px; background: currentColor; border-radius: 50%; }
+
+        .hero-title { font-size: 2.5rem; margin-bottom: 16px; color: #0f172a; }
+        .hero-copy { color: #64748b; margin-bottom: 30px; }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .btn-primary { background: #2563eb; color: white; }
+        .btn-primary:hover { background: #1d4ed8; }
+        .btn-ghost { border: 1px solid #e2e8f0; color: #475569; }
+        .btn-ghost:hover { background: #f8fafc; }
+
+        /* Trạng thái đăng nhập */
+        .logged-in .header { display: flex; }
+        .logged-in .status-pill { background: #f0fdf4; color: #15803d; }
+    </style>
+</head>
+<body>
+<main class="container" id="homeApp">
+    <header class="header" id="headerBar">
+        <div>
+            <p class="header-title">F8 Home</p>
+        </div>
+        <button class="btn btn-ghost" id="logoutBtn">Logout</button>
+    </header>
+
+    <div class="content">
+        <div class="status-pill" id="statusPill">
+            <span class="dot"></span>
+            <span id="statusText">Checking session...</span>
+        </div>
+
+        <h1 class="hero-title">Welcome</h1>
+        <p class="hero-copy" id="heroCopy">
+            You are not signed in yet. Press login to continue.
+        </p>
+
+        <div class="actions" id="actionArea">
+            <a class="btn btn-primary" href="../../login/index.html">Login</a>
+        </div>
+    </div>
+</main>
+</body>
+<script type="module" src="main.js"></script>
+</html>
